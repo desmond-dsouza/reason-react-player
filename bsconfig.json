@@ -1,0 +1,25 @@
+{
+  "name": "Reason-wrapper-for-react-player",
+  "reason": {
+    "react-jsx": 2
+  },
+  "warnings": {
+    "error": "+8"
+  },
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": [
+    "reason-react"
+  ],
+  "refmt": 3
+}
