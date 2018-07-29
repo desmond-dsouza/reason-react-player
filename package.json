@@ -1,5 +1,5 @@
 {
-  "name": "Reason-wrapper-for-react-player",
+  "name": "re-react-player",
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
