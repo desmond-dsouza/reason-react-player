@@ -4,6 +4,7 @@
 
 ```sh
 npm install
+# Add 're-react-player' to bsconfig, then ...
 npm start
 # in another tab
 npm run webpack

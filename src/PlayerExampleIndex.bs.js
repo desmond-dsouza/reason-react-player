@@ -3,8 +3,8 @@
 
 var ReactDOMRe = require("reason-react/src/ReactDOMRe.js");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var PlayerExampleSong$ReasonWrapperForReactPlayer = require("./PlayerExampleSong.bs.js");
+var PlayerExampleSong$ReReactPlayer = require("./PlayerExampleSong.bs.js");
 
-ReactDOMRe.renderToElementWithId(ReasonReact.element(undefined, undefined, PlayerExampleSong$ReasonWrapperForReactPlayer.Demo[/* make */2](/* array */[])), "body");
+ReactDOMRe.renderToElementWithId(ReasonReact.element(undefined, undefined, PlayerExampleSong$ReReactPlayer.Demo[/* make */2](/* array */[])), "body");
 
 /*  Not a pure module */

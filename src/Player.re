@@ -3,7 +3,7 @@ external playerCls : ReasonReact.reactClass = "default";
 
 /* Js.log(playerCls); shows { [Function: ReactPlayer] + many fields } */
 
-[@bs.abstract]
+[@bs.deriving abstract]
 type progress = {
   played: float,
   playedSeconds: float,
@@ -12,7 +12,7 @@ type progress = {
 };
 
 type milliSecs = int;
-type secs = int;
+type secs = float;
 
 let make =
     (
@@ -22,11 +22,12 @@ let make =
       ~onReady: unit => unit=ignore,
       ~onPlay: unit => unit=ignore,
       ~onPause: unit => unit=ignore,
-      ~onProgress: progress => unit=ignore,
+      ~onProgress: secs => unit=ignore,
       ~onSeek: secs => unit=ignore,
       ~onDuration: secs => unit=ignore,
       _children,
-    ) =>
+    ) => {
+  let callOnProgressSecs = p => onProgress(playedSecondsGet(p));
   ReasonReact.wrapJsForReason(
     ~reactClass=playerCls,
     ~props={
@@ -36,9 +37,10 @@ let make =
       "onReady": onReady,
       "onPlay": onPlay,
       "onPause": onPause,
-      "onProgress": onProgress,
+      "onProgress": callOnProgressSecs,
       "onSeek": onSeek,
       "onDuration": onDuration,
     },
     (),
   );
+};

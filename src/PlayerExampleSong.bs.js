@@ -3,7 +3,7 @@
 
 var React = require("react");
 var ReasonReact = require("reason-react/src/ReasonReact.js");
-var Player$ReasonWrapperForReactPlayer = require("./Player.bs.js");
+var Player$ReReactPlayer = require("./Player.bs.js");
 
 var comp = ReasonReact.statelessComponent("song");
 
@@ -21,7 +21,7 @@ function make(song, _) {
           /* render */(function () {
               return React.createElement("div", {
                           className: "card"
-                        }, React.createElement("div", undefined, "Title: " + song[/* title */0]), React.createElement("div", undefined, "Artist: " + song[/* artist */1]), React.createElement("div", undefined, "URL: " + song[/* url */2]), ReasonReact.element(undefined, undefined, Player$ReasonWrapperForReactPlayer.make(undefined, true, 2000, (function () {
+                        }, React.createElement("div", undefined, "Title: " + song[/* title */0]), React.createElement("div", undefined, "Artist: " + song[/* artist */1]), React.createElement("div", undefined, "URL: " + song[/* url */2]), ReasonReact.element(undefined, undefined, Player$ReReactPlayer.make(undefined, true, 2000, (function () {
                                     console.log("READY");
                                     return /* () */0;
                                   }), (function () {

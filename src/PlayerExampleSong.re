@@ -19,7 +19,7 @@ let make = (~song: song, _children) => {
         onReady=(() => Js.log("READY"))
         onPlay=(() => Js.log("PLAY"))
         onPause=(() => Js.log("PAUSE"))
-        onProgress=(p => Js.log2("PROGRESS: ", p))
+        onProgress=((p: Player.secs) => Js.log2("PROGRESS: ", p))
         onSeek=(t => Js.log2("SEEK: ", t)) /* onSeek not called-back */
         onDuration=(t => Js.log2("DURATION: ", t))
       />
